@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecos de Gloria - Web y Radio Cristiana</title>
+    <!-- Carga de Tailwind CSS para un diseño atractivo y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos personalizados para centrar y dar visibilidad al reproductor de radio */
+        #cstrFreePlayerDiv {
+            margin: 0 auto;
+            max-width: 350px; /* Ancho estándar del reproductor */
+            padding-bottom: 20px;
+        }
+        /* Efecto de sombra para el texto principal que simula un "resplandor de gloria" */
+        .text-shadow-glow {
+            text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 12px rgba(109, 40, 217, 0.6);
+        }
+        /* Estilo para el fondo del hero section */
+        .hero-bg {
+            background-color: #3730a3; /* Color índigo oscuro */
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%234f46e5" fill-opacity="0.2" d="M0,64L60,74.7C120,85,240,107,360,112C480,117,600,107,720,133.3C840,160,960,224,1080,240C1200,256,1320,224,1380,208L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Encabezado y Navegación -->
+    <header class="bg-indigo-700 shadow-xl sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold tracking-tight text-yellow-400 text-shadow-glow hover:text-white transition duration-300">
+                Ecos de Gloria
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#radio" class="text-indigo-100 hover:text-yellow-400 transition duration-300 font-semibold">Radio En Vivo</a>
+                <a href="#programacion" class="text-indigo-100 hover:text-yellow-400 transition duration-300 font-semibold">Programación</a>
+                <a href="#noticias" class="text-indigo-100 hover:text-yellow-400 transition duration-300 font-semibold">Noticias Cristianas</a>
+            </nav>
+            <!-- Botón de menú simple para móviles (no funcional, solo estético) -->
+            <button class="md:hidden text-indigo-100 hover:text-yellow-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sección Principal / Hero -->
+    <section class="hero-bg py-24 text-center shadow-inner relative z-10">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-5xl sm:text-6xl font-black text-yellow-400 mb-4 tracking-tighter text-shadow-glow">
+                Jesús en el Centro
+            </h2>
+            <p class="text-xl sm:text-2xl text-indigo-100 mb-10 font-light max-w-2xl mx-auto">
+                La Voz que Inspira tu Día. Escucha contenido que transforma y música que eleva tu espíritu.
+            </p>
+            <a href="#radio" class="inline-block bg-yellow-400 text-indigo-800 font-extrabold py-3 px-10 rounded-full shadow-2xl hover:bg-yellow-300 transition duration-300 transform hover:scale-105 uppercase tracking-wider text-lg">
+                Sintoniza En Vivo
+            </a>
+            
+        </div>
+    </section>
+
+    <!-- Sección del Reproductor de Radio (La más importante) -->
+    <section id="radio" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h3 class="text-4xl font-extrabold text-indigo-700 mb-4">
+                Escúchanos Ahora Mismo
+            </h3>
+            <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
+                Dale play para sintonizar la mejor programación cristiana y noticias edificantes 24 horas al día.
+            </p>
+
+            <!-- Contenedor del Reproductor con estilo destacado -->
+            <div class="bg-indigo-50 p-6 sm:p-8 rounded-2xl shadow-2xl shadow-indigo-200 border-2 border-yellow-400 inline-block">
+                
+                <h4 class="text-2xl font-bold text-indigo-800 mb-4">Ecos de Gloria - En Línea</h4>
+
+                <!-- Código de Reproductor de Caster.fm Proporcionado por el Usuario -->
+                <div id="cstrFreePlayerDiv" class="mb-4"></div>
+                
+                <!-- Script del Reproductor de Radio -->
+                <script type="text/javascript">var cstrFreePlayerUid = 571727;var cstrFreePlayerTheme = "purple";var cstrFreePlayerColor = "";</script>	
+                <script type="text/javascript" src="//corscdn.caster.fm/freeplayer/FreePlanPlayerEmbed.js"></script>	
+                <!-- Los enlaces de abajo se ocultan para mantener la estética, según la instrucción del código original -->	
+                <a id="cstrFreePlayerBL1" href="//www.caster.fm/" class="hidden">Free Shoutcast Hosting</a>
+                <a id="cstrFreePlayerBL2" href="//www.caster.fm/" class="hidden">Radio Stream Hosting</a>
+                <!-- Fin del Código de Reproductor -->
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Sección de Programación y Contenidos -->
+    <section id="programacion" class="py-20 bg-indigo-700">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-extrabold text-center text-yellow-400 mb-12 text-shadow-glow">
+                Contenidos que Edifican
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Devocionales -->
+                <div class="bg-white rounded-xl shadow-2xl p-6 text-center transition transform hover:scale-[1.03] hover:shadow-yellow-300 duration-300 border-b-4 border-indigo-500">
+                    <div class="text-5xl text-yellow-500 mb-4 mx-auto w-fit">
+                        <!-- Icono de Biblia Abierta (Libro) - Usando SVG para un look limpio -->
+                        <svg class="w-12 h-12 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.409 10.05 5 9 5c-2.31 0-4.22 1.79-4.71 4H4a1 1 0 00-1 1v4a1 1 0 001 1h.29c.49 2.21 2.4 4 4.71 4 1.05 0 1.832-.409 3-1.253M12 6.253V5c0-1.104 1.104-2 2-2s2 .896 2 2v1.253m-4 0c1.168.844 1.95 1.253 3 1.253s1.832-.409 3-1.253M12 17.747V19c0 1.104-1.104 2-2 2s-2-.896-2-2v-1.253M12 17.747c-1.168-.844-1.95-1.253-3-1.253s-1.832.409-3 1.253M12 17.747C13.168 18.591 13.95 19 15 19c2.31 0 4.22-1.79 4.71-4H20a1 1 0 001-1v-4a1 1 0 00-1-1h-.29c-.49-2.21-2.4-4-4.71-4-1.05 0-1.832.409-3 1.253"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold text-indigo-800 mb-3">Devocionales y Reflexiones</h4>
+                    <p class="text-gray-600">Mensajes centrados en Cristo para fortalecer tu fe y encontrar guía en la Palabra de Dios.</p>
+                </div>
+
+                <!-- Tarjeta 2: Música -->
+                <div class="bg-white rounded-xl shadow-2xl p-6 text-center transition transform hover:scale-[1.03] hover:shadow-yellow-300 duration-300 border-b-4 border-indigo-500">
+                    <div class="text-5xl text-yellow-500 mb-4 mx-auto w-fit">
+                        <!-- Icono de Notas Musicales -->
+                        <svg class="w-12 h-12 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14m-9 3l12-3m0 0v-4"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold text-indigo-800 mb-3">La Mejor Música Cristiana</h4>
+                    <p class="text-gray-600">Alabanza y Adoración con los artistas más destacados que te llevarán a la presencia de Dios.</p>
+                </div>
+
+                <!-- Tarjeta 3: Noticias -->
+                <div class="bg-white rounded-xl shadow-2xl p-6 text-center transition transform hover:scale-[1.03] hover:shadow-yellow-300 duration-300 border-b-4 border-indigo-500">
+                    <div class="text-5xl text-yellow-500 mb-4 mx-auto w-fit">
+                        <!-- Icono de Periódico -->
+                        <svg class="w-12 h-12 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2m-7 0h2"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-semibold text-indigo-800 mb-3">Noticias Cristianas del Mundo</h4>
+                    <p class="text-gray-600">Información relevante y actual de la comunidad global con una perspectiva de fe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Llamada a la Acción para Noticias -->
+    <section id="noticias" class="bg-indigo-900 py-16 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h3 class="text-4xl font-extrabold text-yellow-400 mb-4">
+                Visita Nuestro Blog de Noticias
+            </h3>
+            <p class="text-xl text-indigo-200 mb-8">
+                Profundiza en los eventos que impactan a la iglesia hoy.
+            </p>
+            <a href="#" class="inline-block bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 uppercase">
+                Ver Noticias
+            </a>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 Ecos de Gloria. Todos los derechos reservados.</p>
+            <p class="mt-2">Contacto: <a href="mailto:info@ecosdegloria.com" class="text-yellow-400 hover:text-white">info@ecosdegloria.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
